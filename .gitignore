@@ -52,3 +52,5 @@ build
 
 .idea
 cmake-build-debug
+.gdb_history
+

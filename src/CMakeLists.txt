@@ -3,7 +3,7 @@ if (NOT MSVC)
   if(BUILD_COVERAGE)
     list(APPEND COMPILE_FLAGS --coverage)
   else()
-    list(APPEND COMPILE_FLAGS -O3)
+#    list(APPEND COMPILE_FLAGS -O3)
   endif()
 endif()
 
