@@ -39,12 +39,24 @@ static const void* memrchr(const void* buffer, unsigned char value, size_t buffe
 #endif
 
 bool IsCompileableFile(const std::string& ext) {
-    static const std::unordered_set<std::string> exts = { ".c", ".C", ".cc", ".cpp", ".m", ".mm" };
+    static const std::unordered_set<std::string> exts = {
+        ".c", ".C", ".cc", ".cpp", ".m", ".mm",
+
+        // wt's file extensions
+        ".inc", ".inl"
+
+    };
     return exts.count(ext) > 0;
 }
 
 static bool IsCode(const std::string &ext) {
-    static const std::unordered_set<std::string> exts = { ".c", ".C", ".cc", ".cpp", ".m", ".mm", ".h", ".H", ".hpp", ".hh" };
+    static const std::unordered_set<std::string> exts = {
+        ".c", ".C", ".cc", ".cpp", ".m", ".mm",
+        ".h", ".H", ".hpp", ".hh",
+
+        // wt's file extensions
+        ".inc", ".inl"
+    };
     return exts.count(ext) > 0;
 }
 
